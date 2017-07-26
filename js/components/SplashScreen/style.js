@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
 
-export default const styles = StyleSheet.create({
+module.exports = StyleSheet.create({
   containerView: {
     flex: 1,
     backgroundColor: '#3B102A',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
