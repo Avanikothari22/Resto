@@ -13,7 +13,7 @@ export default class SplashScreen extends Component{
   }
 
   componentDidMount(){
-    //call api to fetch user data 
+    //call api to fetch user data
     //2. isUserlogin ? fastforward to home : LoginScreen (async Storage.)
   }
 
@@ -25,15 +25,15 @@ export default class SplashScreen extends Component{
 
     // Loader to be stopped when user data is loaded....
     // if user is not already logged in, then the screen should stay for 4-5 seconds and,
-    // then navigate to lOGIN/Signp Screen. 
-    
+    // then navigate to lOGIN/Signp Screen.
+
     return(
     <View style={styles.containerView}>
       <ActivityIndicator
         animating={this.state.isFetching}
         size="large"
         color="#fff"
-        hidesWhenStopped={true}/>
+        hidesWhenStopped={false}/>
     </View>
     );
 
