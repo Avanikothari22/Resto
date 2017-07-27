@@ -3,8 +3,8 @@ import {StyleSheet} from 'react-native';
 module.exports = StyleSheet.create({
   containerView: {
     flex: 1,
-    backgroundColor: '#3B102A',
+    backgroundColor: '#0f163a',
     alignItems: 'center',
     justifyContent: 'center',
   },
-}); 
+});
