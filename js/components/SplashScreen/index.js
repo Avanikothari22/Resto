@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, ActivityIndicator} from 'react-native';
+import {View, ActivityIndicator, Image} from 'react-native';
 import styles from './style';
 
 export default class SplashScreen extends Component{
@@ -29,6 +29,7 @@ export default class SplashScreen extends Component{
 
     return(
     <View style={styles.containerView}>
+    <Image source = {require('./assets/my_logo.png')} />
       <ActivityIndicator
         animating={this.state.isFetching}
         size="large"
