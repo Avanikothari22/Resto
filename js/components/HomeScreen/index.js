@@ -1,23 +1,30 @@
 import React, {Component} from 'react';
-import { View, Image, Text, StatusBar,
-  TouchableHighlight, ScrollView,
-  TextInput, Alert, Dimensions, TouchableOpacity,
-  ActivityIndicator, Button } from 'react-native'
+import { View,
+  Image,
+  Text,
+  StatusBar,
+  TouchableHighlight,
+  ScrollView,
+  TextInput,
+  Alert,
+  Dimensions,
+  TouchableOpacity,
+  ActivityIndicator,
+  Button } from 'react-native'
   import styles from './styles'
-  const height=  Dimensions.get('window').height
+
   export default class HomeScreen extends Component{
     static navigationOptions = { header: false, };
     constructor(props){
       super(props);
-
     }
     render(){
       return(
-      <View style={{ height:{height}, justifyContent:'center', alignItems:'center',flex:1}}>
-        <StatusBar backgroundColor={'#05064c'} />
-        <ScrollView >
-            <View style={{flex: 1,flexDirection:'column'}}>
-              <Image source ={require('./assets/food_logo.jpeg')} style={{ flex:1, resizeMode:'cover',width:500}}/>
+      <View style={styles.container}>
+            <View style={{flex: 1,flexDirection:'column',}}>
+              <Image
+                source ={require('./assets/food_logo.jpeg')}
+                style={styles.headerImage}/>
               <View style={{alignItems:'center',justifyContent:'center'}}>
                 <Image source= {require('./assets/my_logo2.png')} style={{marginTop:-100,resizeMode:'contain'}}/>
               </View>
@@ -52,10 +59,7 @@ import { View, Image, Text, StatusBar,
               <View style={{padding:10}}>
                 <Button title = "continue with Google" color="#AAB7B8"/>
               </View>
-            </View>
           </View>
-        </ScrollView>
-      </View>
       )
     }
   }
