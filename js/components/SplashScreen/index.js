@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, ActivityIndicator, Image, Button, Text} from 'react-native';
-import styles from './styles';
+import styles from './style';
 import HomeScreen from '../HomeScreen';
 export default class SplashScreen extends Component{
   
