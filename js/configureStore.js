@@ -6,11 +6,10 @@ import thunk from 'redux-thunk';
 import { persistStore, autoRehydrate } from 'redux-persist';
 
 export default function configureStore(onCompletion) {
-    const enhancer = compose(
-        applyMiddleware(
-            thunk,
-        ), 
+    const enhancer = compose (
+        applyMiddleware(thunk), 
     );
+
     const store = createStore(reducer, enhancer);
-    persistStore(store, {storage: AsyncStorage}, onCompletion);
+    const persistedData = persistStore(store, {storage: AsyncStorage}, onCompletion);
 }

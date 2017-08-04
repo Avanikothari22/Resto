@@ -10,6 +10,7 @@ export default class LoginScreen extends Component{
         this.state={
             userName:'',
             password:'',
+            isRemembered: false,
         }
     }
 
@@ -40,7 +41,7 @@ export default class LoginScreen extends Component{
                         <View style={styles.inputBox}>
                             <Image
                                 style={styles.loginIcon}
-                                source={require('./assets/email/email.android.png')}/>
+                                source={require('./assets/email/account.android.png')}/>
                             <TextInput
                                 underlineColorAndroid ='#ffffff'
                                 placeholderTextColor='#33496A'
@@ -65,9 +66,21 @@ export default class LoginScreen extends Component{
                                 style={styles.inputTextField}
                             />
                         </View> 
-                        
+
+                        <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 16, paddingRight: 16, marginTop:5, marginBottom: 10 }}s>
+                            <View  style={{flexDirection: 'row'}}>
+                                <TouchableOpacity style= {{marginRight: 5,}} onPress={() => this.setState({isRemembered: !this.state.isRemembered})}>
+                                {this.state.isRemembered ?
+                                <Image source={require('./assets/tick.png')} style={{resizeMode:'contain'}}/>
+                                :
+                                <Image source={require('./assets/untick.png')}/>}
+                            </TouchableOpacity>
+                            <Text style={{color: '#ffffff', textAlignVertical: 'center'}}>  Remember me</Text>
+                           </View><TouchableOpacity style={{alignSelf: 'flex-end'}}><Text style={{color: '#ffffff'}}>Forgot Password?</Text></TouchableOpacity>
+                        </View>
+
                         <TouchableOpacity style={styles.loginButton}>
-                            <Text style={{color:'#ffffff', fontSize: 18, textAlign: 'center'}}>Login In</Text>
+                            <Text style={{color:'#ffffff', fontSize: 18, textAlign: 'center',}}>Login In</Text>
                         </TouchableOpacity>
             
                 </View>

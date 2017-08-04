@@ -54,6 +54,7 @@ export default styles = StyleSheet.create({
         flex:1,
         justifyContent: 'flex-end',
         alignItems:'center',
+        marginBottom: 10,
     },
     welcomeText:{
         color: '#ffffff',
@@ -69,7 +70,7 @@ export default styles = StyleSheet.create({
     baseContainer:{
         flex:2,
         justifyContent:'space-between',
-        marginTop:16
+        marginTop:26
     },
     socialContainer:{
         flex:1,
