@@ -6,10 +6,9 @@ const width = Dimensions.get("window").width;
 export default styles = StyleSheet.create({
     
     container:{
-        flex:1,
-      backgroundColor: '#0f163a',
-      borderColor: '#ffffff',
-      borderWidth:1,
+        height : height-24,
+        backgroundColor: '#0f163a',
+        padding: 16,
     },
     logoView:{
         flex:3,
@@ -24,14 +23,9 @@ export default styles = StyleSheet.create({
     },
     inputBox:{
         flexDirection: 'row',
-        borderColor: '#D3D3D3',
-        borderRadius: 30,
-        borderWidth: 1,
         paddingRight: 10,
         paddingLeft: 10,
-        borderColor:'#ffffff',
         marginBottom: 10,
-        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -42,13 +36,14 @@ export default styles = StyleSheet.create({
         marginLeft:10,
         marginRight: 10,
         fontSize: 16,
+        color: '#ffffff'
     },
     loginContainer:{
         flex:3,
-        padding:16,
         marginTop:10,
         justifyContent:'center',
         alignContent:'center',
+        
     },
     loginIcon:{
         flex:1,
@@ -57,14 +52,47 @@ export default styles = StyleSheet.create({
     },
     welcomeTextView:{
         flex:1,
-        paddingLeft: 16,
-        paddingRight: 16,
         justifyContent: 'flex-end',
         alignItems:'center',
     },
     welcomeText:{
         color: '#ffffff',
         fontSize: 20,
+    },
+    loginButton:{
+        backgroundColor: '#596E8D',  //'#446CA9', //'#336666',
+        padding: 8,
+        marginLeft:16,
+        marginRight: 16,
+        marginTop: 8,
+    },
+    baseContainer:{
+        flex:2,
+        justifyContent:'space-between',
+        marginTop:16
+    },
+    socialContainer:{
+        flex:1,
+        justifyContent:'space-around',
+        alignItems: 'flex-start',
+        flexDirection:'row'
+    },
+    social:{
+        flex:1,
+        padding: 8,
+        backgroundColor: '#596E8D',
+        marginLeft:16,
+        marginRight:16,
+    },
+    socialText:{
+        color:'#ffffff',
+        fontSize: 18,
+        textAlign: 'center'
+    },
+    signatureView:{
+        flex:1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     }
-    
+
 });

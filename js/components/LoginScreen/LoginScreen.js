@@ -21,13 +21,13 @@ export default class LoginScreen extends Component{
 
     render(){
         return(
-       
+        <ScrollView>
             <View style={styles.container}>
         
                 <View style={styles.logoView}>
                     <Image style={styles.logo} source={require('../SplashScreen/assets/my_logo.png')}/>
                     <View>
-                        <Text style={{color: '#ffffff', fontSize: 16, marginTop: -20}}>Search. Eat. Share.</Text>
+                        <Text style={{color: '#ffffff', fontSize: 14, marginTop: -20}}>Search. Eat. Share.</Text>
                     </View>
                 </View>
                 
@@ -43,7 +43,8 @@ export default class LoginScreen extends Component{
                                 source={require('./assets/email/email.android.png')}/>
                             <TextInput
                                 underlineColorAndroid ='#ffffff'
-                                placeholder='Enter your username.'
+                                placeholderTextColor='#33496A'
+                                placeholder='Enter your email.'
                                 onChangeText={(text)=>this.setState({userName: text})}
                                 value={this.state.userName}
                                 style={styles.inputTextField}
@@ -57,6 +58,7 @@ export default class LoginScreen extends Component{
                             <TextInput
                                 underlineColorAndroid ='#ffffff'
                                 placeholder='Enter your password.'
+                                placeholderTextColor= '#33496A'
                                 secureTextEntry={true}
                                 onChangeText={(text)=>this.setState({password: text})}
                                 value={this.state.password}
@@ -64,18 +66,27 @@ export default class LoginScreen extends Component{
                             />
                         </View> 
                         
-                        <TouchableOpacity style={{backgroundColor: '#336666', padding: 16, marginTop:10, borderRadius: 30}}>
+                        <TouchableOpacity style={styles.loginButton}>
                             <Text style={{color:'#ffffff', fontSize: 18, textAlign: 'center'}}>Login In</Text>
                         </TouchableOpacity>
             
                 </View>
                 
-                <View style={{flex:2,}}>
-
+                <View style={styles.baseContainer}>
+                    <View style={styles.socialContainer}>
+                        <TouchableOpacity style={[styles.social,{marginRight:10, backgroundColor:'#db3236'}]}>
+                            <Text style={styles.socialText}>G+ Login In</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.social,{backgroundColor: '#3b5998', marginLeft:0}]}>
+                            <Text style={styles.socialText}>fb Login In</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.signatureView}>
+                        <Text style={{color: '#ffffff'}}>Made with  ❤  by Suraj Malviya. </Text>
+                    </View>
                 </View>
-    
             </View>
-      
+            </ScrollView>
         );
         
     }
