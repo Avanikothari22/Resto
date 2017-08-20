@@ -17,7 +17,7 @@ module.exports = StyleSheet.create({
   },
   tag:{
     color: '#ffffff',
-    fontSize:14,
+    fontSize:16,
     marginTop:-20,
   }
 });

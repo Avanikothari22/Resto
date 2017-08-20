@@ -10,15 +10,16 @@ import { View,
   Dimensions,
   TouchableOpacity,
   ActivityIndicator,
-  Button } from 'react-native'
-  import styles from './styles'
-
+  Button } from 'react-native';
+  import styles from './style';
+ 
   export default class HomeScreen extends Component{
     static navigationOptions = { header: false, };
     constructor(props){
       super(props);
     }
    render(){
+     const {navigate} = this.props.navigation;
       return(
       <View style={styles.container}>
         
@@ -48,7 +49,7 @@ import { View,
         <View style={styles.buttons}>
           <View style={{flexDirection:'row', flex:1.5, justifyContent:'space-between'}}>
             <View style={styles.loginButton}>
-              <Button title='Login' color='#0f163a' onPress={()=>console.log('pressed')}/>
+              <Button title='Login' color='#0f163a' onPress={()=>navigate('LoginScreen')}/>
             </View>
            <View style={{flex:1}}>
              <Button title='SignUp' color='#0f163a' onPress={()=>console.log('pressed')}/>
