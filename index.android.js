@@ -12,6 +12,6 @@ import {
   View
 } from 'react-native';
 
-import SplashScreen from './js/components/SplashScreen'
+import RestoApp from './js/App.js'
 
-AppRegistry.registerComponent('Resto', () => SplashScreen);
+AppRegistry.registerComponent('Resto', () => RestoApp);
